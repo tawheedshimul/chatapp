@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { io } from "socket.io-client"
 import { useAuth } from "./AuthContext"
-import { SOCKET_URL } from "../config"
+// import { SOCKET_URL } from "../config"
 
 const SocketContext = createContext()
 
@@ -25,7 +25,7 @@ export const SocketProvider = ({ children }) => {
       return
     }
 
-    const newSocket = io(SOCKET_URL, {
+    const newSocket = io('http://localhost:7000', {
       withCredentials: true,
     })
 

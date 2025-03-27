@@ -25,7 +25,7 @@ const ChatWindow = ({ conversation, onMessageSent, onOpenSidebar }) => {
     const fetchMessages = async () => {
       setLoading(true)
       try {
-        const response = await fetch(`${API_URL}/api/messages/${conversation._id}`, {
+        const response = await fetch(`http://localhost:7000/api/messages/${conversation._id}`, {
           credentials: "include",
         })
 

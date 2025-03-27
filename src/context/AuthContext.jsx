@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        const response = await fetch(`${API_URL}/api/users/me`, {
+        const response = await fetch("http://localhost:7000/api/users/me", {
           method: "GET",
           credentials: "include",
         })

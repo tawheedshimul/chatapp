@@ -31,7 +31,7 @@ const Chat = () => {
   useEffect(() => {
     const fetchConversations = async () => {
       try {
-        const response = await fetch(`${API_URL}/api/conversations`, {
+        const response = await fetch("http://localhost:7000/api/conversations", {
           credentials: "include",
         })
 

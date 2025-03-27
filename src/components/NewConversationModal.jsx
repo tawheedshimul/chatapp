@@ -15,7 +15,7 @@ const NewConversationModal = ({ onClose, onNewConversation }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch(`${API_URL}/api/users`, {
+        const response = await fetch("http://localhost:7000/api/users", {
           credentials: "include",
         })
 
